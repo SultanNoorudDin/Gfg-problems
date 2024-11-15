@@ -1,0 +1,16 @@
+#problem link: https://www.geeksforgeeks.org/problems/reverse-an-array/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card
+
+#problem solution:
+
+int n = arr.size();
+    
+    // Temporary array to store elements in reversed order
+    vector<int> temp(n);
+  
+    // Copy elements from original array to temp in reverse order
+    for(int i = 0; i < n; i++)
+        temp[i] = arr[n - i - 1];
+  
+    // Copy elements back to original array
+    for(int i = 0; i < n; i++)
+        arr[i] = temp[i];
